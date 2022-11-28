@@ -33,12 +33,15 @@ public class Main {
         System.out.println(manTgx);
         System.out.println(volvoFh16);
 
-        PassengerCarDriver<PassengerCar> hakkinen = new PassengerCarDriver<>("Hakkinen", true, 25);
-        BusDriver<Bus> hamilton = new BusDriver<>("Hamilton", true, 18);
-        TruckDriver<Truck> schumacher = new TruckDriver<>("Schumacher", true, 36);
+        PassengerCarDriver<PassengerCar> hakkinen = new PassengerCarDriver<>("Hakkinen", true, 25, pajero);
+        BusDriver<Bus> hamilton = new BusDriver<>("Hamilton", true, 18, gazeleCity);
+        TruckDriver<Truck> schumacher = new TruckDriver<>("Schumacher", true, 36, valdaiNext);
 
-        hakkinen.race(pajero);
-        hamilton.race(gazeleCity);
-        schumacher.race(valdaiNext);
+        hakkinen.race();
+        hakkinen.startDrive();
+        hakkinen.stopCar();
+        hakkinen.refillCar();
+        hamilton.race();
+        schumacher.race();
     }
 }
